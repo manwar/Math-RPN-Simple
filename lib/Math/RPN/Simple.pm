@@ -167,7 +167,7 @@ int(x) - Returns int representation of x.
 
 cos(x) - Returns cos of x.
 
-=item*
+=item *
 
 sin(x) - Returns sin of x.
 
