@@ -9,7 +9,7 @@ use List::Util qw(any);
 our @ISA=qw(Exporter);
 our @EXPORT=qw(to_infix to_postfix evaluate_infix evaluate_postfix);
 
-our $VERSION='1.0.1';
+our $VERSION='1.1.0';
 our $LIBRARY=__PACKAGE__;
 
 sub to_infix{
@@ -19,7 +19,7 @@ sub to_infix{
 		elsif($& eq $3){
 			my @args=(pop @stack,pop @stack);
 			push(@stack,"($args[1]$&$args[0])");
-		}elsif($& eq any(['abs','int'])){push(@stack,$&.'('.pop(@stack).')')}
+		}elsif($& eq any(['abs','int','cos','sin'])){push(@stack,$&.'('.pop(@stack).')')}
 		else{croak "Undefined function \"$&\""}
 	}
 	return $stack[0];
@@ -61,7 +61,7 @@ Math::RPN::Simple - Simpler implementation of L<Math::RPN>.
 
 =head1 VERSION
 
-Version 1.0.1
+Version 1.1.0
 
 =head1 DESCRIPTION
 
@@ -153,7 +153,7 @@ x**y - x to the power of y.
 
 =head1 FUNCTIONS
 
-=over 2
+=over 4
 
 =item *
 
@@ -162,6 +162,14 @@ abs(x) - Returns absolute value of x.
 =item *
 
 int(x) - Returns int representation of x.
+
+=item *
+
+cos(x) - Returns cos of x.
+
+=item*
+
+sin(x) - Returns sin of x.
 
 =back
 
