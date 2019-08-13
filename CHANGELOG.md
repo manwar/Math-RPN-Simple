@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2019-08-13
+
+### Fixed
+
+##### [lib/Math/RPN/Simple.pm](lib/Math/RPN/Simple.pm)
+
+- Typos in POD.
+
 ## [1.0.0] - 2019-08-13
 
 ### Added

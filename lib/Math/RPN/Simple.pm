@@ -9,7 +9,7 @@ use List::Util qw(any);
 our @ISA=qw(Exporter);
 our @EXPORT=qw(to_infix to_postfix evaluate_infix evaluate_postfix);
 
-our $VERSION='1.0.0';
+our $VERSION='1.0.1';
 our $LIBRARY=__PACKAGE__;
 
 sub to_infix{
@@ -61,7 +61,7 @@ Math::RPN::Simple - Simpler implementation of L<Math::RPN>.
 
 =head1 VERSION
 
-Version 1.0.0
+Version 1.0.1
 
 =head1 DESCRIPTION
 
@@ -71,23 +71,59 @@ Math::RPN::Simple is used to convert infix and postfix notations and to evaluate
 
 =head2 to_infix(expression)
 
+=over 2
+
+=item *
+
 expression - Postfix expression to convert.
+
+=item *
+
 return value - Infix representation of expression.
+
+=back
 
 =head2 to_postfix(expression)
 
+=over 2
+
+=item *
+
 expression - Infix expression to convert.
+
+=item *
+
 return value - Postfix representation of expression.
+
+=back
 
 =head2 evaluate_infix(expression)
 
+=over 2
+
+=item *
+
 expression - Infix expression to evaluate.
+
+=item *
+
 return value - Value of infix expression.
+
+=back
 
 =head2 evaluate_postfix(expression)
 
+=over 2
+
+=item *
+
 expression - Postfix expression to evaluate.
+
+=item *
+
 return value - Value of postfix expression.
+
+=back
 
 =head1 OPERATORS
 
@@ -121,11 +157,11 @@ x**y - x to the power of y.
 
 =item *
 
-abs(x) - returns absolute value of x.
+abs(x) - Returns absolute value of x.
 
 =item *
 
-int(x) - returns int representation of x.
+int(x) - Returns int representation of x.
 
 =back
 
